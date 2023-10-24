@@ -1,0 +1,25 @@
+{
+  "name": "1sat-wallet",
+  "version": "1.0.0",
+  "description": "",
+  "author": "David Case",
+  "license": "MIT",
+  "type": "module",
+  "source": "src/wallet.ts",
+  "exports": {
+    "require": "./dist/wallet.cjs",
+    "default": "./dist/wallet.modern.js"
+  },
+  "main": "./dist/wallet.cjs",
+  "module": "./dist/wallet.module.js",
+  "unpkg": "./dist/wallet.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "dependencies": {
+    "@ts-bitcoin/core": "^2.2.0",
+    "bitcoin-ef": "^0.1.3",
+    "microbundle": "^0.15.1"
+  }
+}
